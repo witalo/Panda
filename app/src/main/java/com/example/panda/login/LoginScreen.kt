@@ -1,4 +1,4 @@
-package com.example.panda
+package com.example.panda.login
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -12,15 +12,16 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AccountCircle
+import androidx.compose.material.icons.filled.Home
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
-import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -34,9 +35,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.panda.MainScreen
+import com.example.panda.R
 
 @Composable
-fun LoginScreen() {
+fun LoginScreen(onLoginSuccess: () -> Unit) {
     var password by remember { mutableStateOf("") }
     Column(
         modifier = Modifier.fillMaxSize(),
@@ -78,7 +81,7 @@ fun LoginScreen() {
 //        OutlinedTextField(value = "", onValueChange = {}, label = {Text(text = "Contraseña")})
         Spacer(modifier = Modifier.height(16.dp))
         Button(
-            onClick = {},
+            onClick = { onLoginSuccess() },
             colors = ButtonDefaults.buttonColors(
 //                containerColor = Color.Blue, // Color del fondo del botón
                 contentColor = Color.White // Color del texto y el ícono
@@ -88,10 +91,11 @@ fun LoginScreen() {
         ) {
             Row {
                 Icon(
-                    painter = painterResource(id = R.drawable.ic_launcher_foreground), // Reemplaza con tu ícono
+//                    painter = painterResource(id = R.drawable.ic_launcher_foreground), // Reemplaza con tu ícono
+                    imageVector = Icons.Default.AccountCircle, // Usando un ícono predeterminado
                     contentDescription = "Icono de ingreso",
                     tint = Color.White, // Color del ícono
-                    modifier = Modifier.size(24.dp)
+//                    modifier = Modifier.size(24.dp)
                 )
                 Text(
                     text = " Ingresar", // Añade un espacio antes del texto
