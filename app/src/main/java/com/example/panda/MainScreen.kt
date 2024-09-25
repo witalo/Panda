@@ -89,7 +89,11 @@ fun MainScreen() {
             }
         }
     ) { innerPadding ->
-        ContentScreen(modifier = Modifier.padding(innerPadding).fillMaxSize(),selectedIndex)
+        ContentScreen(modifier = Modifier
+            .padding(innerPadding)
+            .fillMaxSize(),
+            selectedIndex
+        )
     }
 }
 
@@ -97,9 +101,9 @@ fun MainScreen() {
 @Composable
 fun ContentScreen(modifier: Modifier = Modifier, selectedIndex : Int) {
     when(selectedIndex){
-        0-> ProfileScreen()
-        1-> AreaScreen()
-        2-> ReportScreen()
+        0-> ProfileScreen(modifier)
+        1-> AreaScreen(modifier)
+        2-> ReportScreen(modifier)
     }
 }
 

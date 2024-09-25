@@ -11,7 +11,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 
 @Composable
-fun ReportScreen() {
+fun ReportScreen(modifier: Modifier = Modifier) {
     Box(
         modifier = Modifier
             .fillMaxSize(),

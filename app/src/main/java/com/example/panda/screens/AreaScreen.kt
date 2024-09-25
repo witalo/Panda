@@ -25,7 +25,7 @@ import androidx.compose.ui.unit.dp
 
 
 @Composable
-fun AreaScreen() {
+fun AreaScreen(modifier: Modifier = Modifier) {
     val items = listOf(
         Item("Piso 1", "Descripción del ítem 1"),
         Item("Piso 2", "Descripción del ítem 2"),
@@ -50,9 +50,9 @@ fun AreaScreen() {
 //            color = Color.Black
 //        )
 //    }
-    LazyColumn(
-        modifier = Modifier.fillMaxSize(),
-        contentPadding = PaddingValues(bottom = 120.dp, top = 120.dp)
+    LazyColumn(modifier = modifier.padding(16.dp)
+//        modifier = Modifier.fillMaxSize(),
+//        contentPadding = PaddingValues(bottom = 120.dp, top = 120.dp)
     ) {
         items(items) { item ->
             CardItem(item = item)
