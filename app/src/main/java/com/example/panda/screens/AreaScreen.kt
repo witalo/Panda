@@ -38,18 +38,6 @@ fun AreaScreen(modifier: Modifier = Modifier) {
         Item("Piso 9", "Descripción del ítem 5"),
         Item("Piso 10", "Descripción del ítem 5"),
     )
-//    Box(
-//        modifier = Modifier
-//            .fillMaxSize()
-//            .background(Color.White),
-//        contentAlignment = Alignment.Center
-//    ) {
-//        Text(
-//            text = "Area",
-//            fontWeight = FontWeight.Bold,
-//            color = Color.Black
-//        )
-//    }
     LazyColumn(modifier = modifier.padding(16.dp)
 //        modifier = Modifier.fillMaxSize(),
 //        contentPadding = PaddingValues(bottom = 120.dp, top = 120.dp)
