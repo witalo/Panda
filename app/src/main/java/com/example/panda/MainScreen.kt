@@ -89,7 +89,7 @@ fun MainScreen() {
             }
         }
     ) { innerPadding ->
-        ContentScreen(modifier = Modifier.padding(innerPadding),selectedIndex)
+        ContentScreen(modifier = Modifier.padding(innerPadding).fillMaxSize(),selectedIndex)
     }
 }
 
