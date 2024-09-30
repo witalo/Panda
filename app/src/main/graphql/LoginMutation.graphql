@@ -1,0 +1,11 @@
+mutation LoginPinMutation($mac: String!, $password: String!){
+    loginPin(mac: $mac, password: $password){
+        employee{
+            id
+            nameLastname
+            nDocument
+        }
+        success
+        error
+    }
+}

@@ -1,6 +1,13 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("com.apollographql.apollo3").version("3.8.3")
+}
+apollo {
+    service("service") {
+        packageName.set("com.example.panda")
+    }
+    generateKotlinModels.set(true)
 }
 
 android {
@@ -61,7 +68,6 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.androidx.compose.material)
     implementation(libs.androidx.navigation.compose)
-//    implementation("androidx.compose.material3:material3:1.3.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -69,6 +75,8 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-
-//    implementation("androidx.navigation:navigation-compose:2.8.1")
+//    Apollo GraphQL
+    implementation("com.apollographql.apollo3:apollo-runtime:3.8.3")
+//    ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.6")
 }
