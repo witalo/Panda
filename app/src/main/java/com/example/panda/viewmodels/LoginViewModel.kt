@@ -23,6 +23,7 @@ class LoginViewModel : ViewModel() {
     }
 
     fun login(mac: String, password: String) {
+        Log.d("PANDA-APP", "Mac: $mac Password:$password")
         viewModelScope.launch {
             try {
                 Log.d("PANDA-APP", "mac $mac; password $password")

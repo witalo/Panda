@@ -68,6 +68,7 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.androidx.compose.material)
     implementation(libs.androidx.navigation.compose)
+    implementation(libs.play.services.home)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -79,4 +80,5 @@ dependencies {
     implementation("com.apollographql.apollo3:apollo-runtime:3.8.3")
 //    ViewModel
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.6")
+    implementation("com.github.judemanutd:device-identifiers:1.0.3")
 }
